@@ -2,23 +2,25 @@ const products = [
   {
     id: 1,
     name: "Running Shoes",
+    category: "shoes",
     price: 120,
     image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
   },
   {
     id: 2,
     name: "Luxury Watch",
+    category: "watch",
     price: 350,
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop"
   },
   {
     id: 3,
     name: "Fashion Jacket",
+    category: "clothing",
     price: 180,
     image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop"
   }
 ];
-
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function saveCart() {
@@ -116,3 +118,45 @@ function toggleCart() {
 window.onload = function () {
   updateCartUI();
 };
+
+function searchProducts() {
+  const input = document
+    .getElementById('search-input')
+    .value
+    .toLowerCase();
+
+  const cards = document.querySelectorAll('.product-card');
+
+  cards.forEach(card => {
+    const title = card.querySelector('h3')
+      .innerText
+      .toLowerCase();
+
+    if (title.includes(input)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function filterProducts(category) {
+  const cards = document.querySelectorAll('.product-card');
+
+  cards.forEach(card => {
+
+    const title = card.querySelector('h3')
+      .innerText
+      .toLowerCase();
+
+    if (
+      category === 'all' ||
+      title.includes(category)
+    ) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+
+  });
+}
