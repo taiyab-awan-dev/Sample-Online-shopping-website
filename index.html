@@ -9,7 +9,10 @@
 <body>
 
   <header>
-    <div class="logo">ModernShop</div>
+
+    <div class="logo">
+      ModernShop
+    </div>
 
     <nav>
       <a href="#">Home</a>
@@ -19,48 +22,100 @@
     </nav>
 
     <div class="cart" onclick="toggleCart()">
-  Cart (<span id="cart-count">0</span>)
-</div>
-    
+      Cart (<span id="cart-count">0</span>)
+    </div>
+
   </header>
+
+  <!-- CART SIDEBAR -->
 
   <div class="cart-sidebar" id="cart-sidebar">
 
-  <h2>Your Cart</h2>
+    <h2>Your Cart</h2>
 
-  <div id="cart-items"></div>
+    <div id="cart-items"></div>
 
-  <h3>Total: $<span id="total-price">0</span></h3>
+    <h3>
+      Total: $<span id="total-price">0</span>
+    </h3>
 
-</div>
+  </div>
+
+  <!-- HERO SECTION -->
 
   <section class="hero">
+
     <h1>Modern Shopping Experience</h1>
-    <p>Discover premium products with elegant design.</p>
-    <button>Shop Now</button>
+
+    <p>
+      Discover premium products with elegant design.
+    </p>
+
+    <button>
+      Shop Now
+    </button>
+
   </section>
+
+  <!-- PRODUCTS -->
 
   <section class="products">
 
+    <!-- PRODUCT 1 -->
+
     <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop" alt="">
+
+      <img
+        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
+        alt="Running Shoes"
+      >
+
       <h3>Running Shoes</h3>
+
       <p>$120</p>
-      <button onclick="addToCart(1)">Add to Cart</button>
+
+      <button onclick="addToCart(1)">
+        Add to Cart
+      </button>
+
     </div>
 
+    <!-- PRODUCT 2 -->
+
     <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop" alt="">
+
+      <img
+        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop"
+        alt="Luxury Watch"
+      >
+
       <h3>Luxury Watch</h3>
+
       <p>$350</p>
-      <button onclick="addToCart(2)">Add to Cart</button>
+
+      <button onclick="addToCart(2)">
+        Add to Cart
+      </button>
+
     </div>
 
+    <!-- PRODUCT 3 -->
+
     <div class="product-card">
-      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop" alt="">
+
+      <img
+        src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop"
+        alt="Fashion Jacket"
+      >
+
       <h3>Fashion Jacket</h3>
+
       <p>$180</p>
-      <button onclick="addToCart(3)">Add to Cart</button>
+
+      <button onclick="addToCart(3)">
+        Add to Cart
+      </button>
+
     </div>
 
   </section>
