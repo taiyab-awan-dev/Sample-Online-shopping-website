@@ -183,3 +183,26 @@ nav a:hover {
   border-radius: 6px;
   cursor: pointer;
 }
+
+#search-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 220px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.filters button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
