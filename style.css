@@ -126,3 +126,60 @@ nav a:hover {
 .product-card button:hover {
   background: #1d4ed8;
 }
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #1f2937;
+  padding: 20px;
+  transition: 0.4s;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.cart-sidebar.active {
+  right: 0;
+}
+
+.cart-item {
+  display: flex;
+  gap: 10px;
+  background: #374151;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.quantity-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  padding: 4px 10px;
+}
+
+.remove-btn {
+  background: red;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
