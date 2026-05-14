@@ -21,6 +21,12 @@
       <a href="#">Contact</a>
     </nav>
 
+  <input
+  type="text"
+  id="search-input"
+  placeholder="Search products..."
+  onkeyup="searchProducts()"
+>
     <div class="cart" onclick="toggleCart()">
       Cart (<span id="cart-count">0</span>)
     </div>
@@ -57,6 +63,25 @@
 
   </section>
 
+  <div class="filters">
+
+  <button onclick="filterProducts('all')">
+    All
+  </button>
+
+  <button onclick="filterProducts('shoes')">
+    Shoes
+  </button>
+
+  <button onclick="filterProducts('watch')">
+    Watches
+  </button>
+
+  <button onclick="filterProducts('clothing')">
+    Clothing
+  </button>
+
+</div>
   <!-- PRODUCTS -->
 
   <section class="products">
